@@ -22,6 +22,58 @@ const fibLength2 = 10
 
 // b) Create the function that makes the test pass.
 
+
+describe("fibonacci", () =>{
+  it("takes in a number greater than 2 and creates a new array", () => {
+    expect(fibonacci(fibLength1)).toEqual([1, 1, 2, 3, 5, 8])
+  }
+)})
+
+// FAIL  ./code-challenges.test.js
+// fibonacci
+//   ✕ takes in a number greater than 2 and creates a new array
+
+// ● fibonacci › takes in a number greater than 2 and creates a new array
+
+//   ReferenceError: fibonacci is not defined
+
+
+const fibonacci = (n) => {
+  let array = [1,1]
+for (let i = 1; i <=n ; i++) {
+  array.push(array[i] + array[i - 1])
+  
+  console.log(array[i])
+  
+}
+return (array)
+}
+
+
+  
+// psuedo code 
+// create functin that takes in a number greater than 2 and creates a array with the remaining numbers.
+//create a test function: describe(fibLength1, () =>{
+//it("takes in a number greater than 2 and creates a new array", () => {
+ // expect(fibLength1()).toEqual([1, 1, 2, 3, 5, 8])
+//}
+//}
+//run to see if it is a good fail 
+// 1 + 1 = 2 
+// 1 + 2 = 3
+// 2 + 3 = 5
+// 3 + 5 = 8
+//adding the zero index and 1 index together to get index 2
+//adding the 1 index and 2 index to get the 3rd index.
+// adding the 2nd and 3rd index to get the 4th index
+//adding the 3rd and 4th index to get the 5th index
+
+// array [1, 1, 2, 3, 5, 8]
+
+// array[0] + array[1] = array[2]
+
+
+
 // --------------------2) Create a function that takes in an object and returns an array of the values sorted from least to greatest.
 // Hint: Check out this resource: Object.values() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values
 
@@ -64,4 +116,4 @@ const accountTransactions2 = [250, -89, 100, -96]
 const accountTransactions3 = []
 // Expected output: []
 
-// b) Create the function that makes the test pass.
+// b) Create the function that makes the test pass 
