@@ -30,42 +30,42 @@ const fibLength2 = 10
 // b) Create the function that makes the test pass.
 
 
-// describe("fibonacci", () =>{
-//   it("takes in a number greater than 2 and creates a new array", () => {
-//     expect(fibonacci(fibLength1)).toEqual([1, 1, 2, 3, 5, 8])
-//   }
-// )})
+describe("fibonacci", () =>{
+  it("takes in a number greater than 2 and creates a new array", () => {
+    expect(fibonacci(fibLength1)).toEqual([1, 1, 2, 3, 5, 8])
+  }
+)})
 
-// describe("fibonacci", () =>{
-//   it("takes in a number greater than 2 and creates a new array", () => {
-//     expect(fibonacci(fibLength2)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
-//   }
-// )})
+describe("fibonacci", () =>{
+  it("takes in a number greater than 2 and creates a new array", () => {
+    expect(fibonacci(fibLength2)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
+  }
+)})
 
-// FAIL  ./code-challenges.test.js
-// fibonacci
-//   ✕ takes in a number greater than 2 and creates a new array
+FAIL  ./code-challenges.test.js
+fibonacci
+  ✕ takes in a number greater than 2 and creates a new array
 
-// ● fibonacci › takes in a number greater than 2 and creates a new array
+● fibonacci › takes in a number greater than 2 and creates a new array
 
-//   ReferenceError: fibonacci is not defined
+  ReferenceError: fibonacci is not defined
 
 
-// const fibonacci = (n) => {
-//   let array = []
-//   let firstNum = 0
-//   let secondNum = 1
-// for (let i = 0; i <=n ; i++) {
-//   array.push(firstNum) 
-// let nextNum = firstNum + secondNum
-//    firstNum = secondNum
-//   secondNum = nextNum
+const fibonacci = (n) => {
+  let array = []
+  let firstNum = 0
+  let secondNum = 1
+for (let i = 0; i <=n ; i++) {
+  array.push(firstNum) 
+let nextNum = firstNum + secondNum
+   firstNum = secondNum
+  secondNum = nextNum
   
   
-// }
-// array.shift()
-// return (array)
-// }
+}
+array.shift()
+return (array)
+}
 
 
   
@@ -124,59 +124,59 @@ const studyMinutesWeek2 = {
 // Expected output: [10, 15, 20, 45, 60, 65, 100]
 
 
-// describe("sorted", () =>{
-//   it("takes in a object and returns values sorted least to greatest", () => {
-//     expect(sorted(studyMinutesWeek1)).toEqual([15, 15, 20, 30, 30, 60, 90])
-//   }
-// )})
+describe("sorted", () =>{
+  it("takes in a object and returns values sorted least to greatest", () => {
+    expect(sorted(studyMinutesWeek1)).toEqual([15, 15, 20, 30, 30, 60, 90])
+  }
+)})
 
-// describe("sorted", () =>{
-//   it("takes in a object and returns values sorted least to greatest", () => {
-//     expect(sorted(studyMinutesWeek2)).toEqual([10, 15, 20, 45, 60, 65, 100])
-//   }
-// )})
+describe("sorted", () =>{
+  it("takes in a object and returns values sorted least to greatest", () => {
+    expect(sorted(studyMinutesWeek2)).toEqual([10, 15, 20, 45, 60, 65, 100])
+  }
+)})
 
 
-// const sorted = (swag) => {
-//  let cat = Object.values(swag) 
-//     return cat.sort((a, b) => {
-//       return a - b
-//     })
+const sorted = (swag) => {
+ let cat = Object.values(swag) 
+    return cat.sort((a, b) => {
+      return a - b
+    })
    
    
 
 
 
-// }
+}
 
-// console.log(sorted(studyMinutesWeek1))
-// console.log(sorted(studyMinutesWeek2))
+console.log(sorted(studyMinutesWeek1))
+console.log(sorted(studyMinutesWeek2))
 
 
 
 // psuedo code: Create a function that takes in an object and returns an array of the values sorted from least to greatest.
 // first i need to make my describe satements. 
 // - run to see if it has a good fail. 
-// - FAIL  ./code-challenges.test.js
-//   sorted
-//     ✕ takes in a object and returns values sorted least to greatest (1 ms)
-//     ✕ takes in a object and returns values sorted least to greatest
+- FAIL  ./code-challenges.test.js
+  sorted
+    ✕ takes in a object and returns values sorted least to greatest (1 ms)
+    ✕ takes in a object and returns values sorted least to greatest
 
-//   ● sorted › takes in a object and returns values sorted least to greatest
+  ● sorted › takes in a object and returns values sorted least to greatest
 
-//     ReferenceError: sorted is not defined
+    ReferenceError: sorted is not defined
 
-//       122 | describe("sorted", () =>{
-//       123 |   it("takes in a object and returns values sorted least to greatest", () => {
-//     > 124 |     expect(sorted(studyMinutesWeek1)).toEqual([15, 15, 20, 30, 30, 60, 90])
-//           |     ^
-//       125 |   }
-//       126 | )})
-//       127 |
+      122 | describe("sorted", () =>{
+      123 |   it("takes in a object and returns values sorted least to greatest", () => {
+    > 124 |     expect(sorted(studyMinutesWeek1)).toEqual([15, 15, 20, 30, 30, 60, 90])
+          |     ^
+      125 |   }
+      126 | )})
+      127 |
 
-//       at Object.expect (code-challenges.test.js:124:5)
+      at Object.expect (code-challenges.test.js:124:5)
 
-//   ● sorted › takes in a object and returns values sorted least to greatest
+  ● sorted › takes in a object and returns values sorted least to greatest
 
 //     ReferenceError: sorted is not defined
 // - creat function. 
